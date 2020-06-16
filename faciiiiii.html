@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <title> facilitator</title>
+ <meta charset="UTF-8">
+ <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+ <link rel="stylesheet" href="facrsss.css" >
+ <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
+<!-- JS, Popper.js, and jQuery -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+ <script >
+   function getfocustxt(){
+     document.getElementById("name").focus();
+    
+   }
+ </script>
+<body onload="getfocustxt();">
+  <div class="container-fluid">
+  <div class="row">
+  <!-- <div class="container"> -->
+  <div class="col-sm-6 col-md-6 col-lg-4 ml-4">
+      <h2 class="text-light">   WELCOME  </h2>
+    
+    <p class="text-light"> You are 1 minute away from collaborating with us!</p>
+    
+      <img src="change.jpg" >
+    
+    
+    </div>
+
+  
+ <div class="wrapper">
+    <div class= "title">
+      BECOME A CHANGEMAKER 
+    </div>
+    <form action=""  id="form" onsubmit="openModal()">
+      <div class="form">
+      <div class="form-group">
+        <div class="col-md-6" >
+           
+              <input type="text" class="form-control" id="name"  placeholder="Name" required>  
+         </div>
+          <br>
+         <div class="col-md-4">
+             
+            <input type="email" class="form-control" id="email" placeholder="Email" required="" >   
+         </div>
+     </div> 
+
+       <div class="form-group">
+         
+          <div class="col-md-6"> 
+
+               <input type="tel" class="input"  placeholder="Mobile no"  id="phone"  pattern="^\d{10}$" required >
+            </div>
+       
+         <div class="col-md-4">
+            <input type="text" name="exp1" id="list" list="List" placeholder="Experience" size="20" style="height: 40px;"   required="" >
+           <datalist id="List">
+            <option value="3-6 yrs">  
+            <option value="6-10 yrs">
+            <option value="10+ yrs"> 
+           
+       </datalist>
+      </div>
+     </div>
+
+
+       <div class="form-group">
+    
+         <div class="col-md-6">  
+
+         
+              <input type="text" name="exp1" id="list2" list="List" placeholder="Training Experience" size="20" style="height: 40px;" required="">
+           <datalist id="List">
+            <option value="3-6 yrs">  
+            <option value="6-10 yrs">
+            <option value="10+ yrs">
+       </datalist>
+      </div>
+     
+       <div class="col-md-4">  
+
+        <input type="url" name="url" id="list3" placeholder="LinkedIn Profile Link" pattern="^http(s)?:\/\/(www\.)?linkedin\.com\/in\/.*$" size="20" style="height: 40px;"  required >
+        
+       </div>
+      </div>
+      <div class="form-group">
+        
+        <div class="col-md-6">  
+              <label>Youtube link</label>
+<input type="url"  id= "channel"  placeholder="Youtube channel link if any" size="20" style="height: 40px;" pattern="http(?:s?):\/\/(?:www\.)?youtu(?:be\.com\/watch\?v=|\.be\/)([\w\-\_]*)(&(amp;)?‌​[\w\?‌​=]*)?
+             ">
+     </div>
+
+        <div class="col-md-4">  
+          
+          <input type="url"  id= "link"  placeholder="URL(optional)" size="20" style="height: 40px; width:20;" pattern="^(?:http(s)?:\/\/)?[\w.-]+(?:\.[\w\.-]+)+[\w\-\._~:/?#[\]@!\$&'\(\)\*\+,;=.]+$">
+
+       </div>
+     </div>
+       <div class="form-group">
+        
+         <div class="col-md-6">  
+               <label > Profile</label>
+               <input type="file"  id= "file" title="Attach resume in doc/pdf format" accept=".pdf,.doc" required>
+       </div>
+
+         <div class="col-md-4">  
+              
+      <textarea rows="2"cols="2" maxlength=""  id="textar" placeholder="Any Questions/Suggestions" size="40"></textarea>
+         </div>
+       </div>
+     <div class="button">
+      <button type ="submit" class="btn btn-primary" > NEXT</button> 
+    <div>
+      <script >
+
+         $('#form').on('submit',function(e){
+          $('#exampleModalLong').modal('show');
+          e.preventDefault();
+         });
+      </script>
+
+
+</form>
+<!-- Modal -->
+<div class="modal fade" id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+      <button type="button" class="close" onclick="reset()" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button> 
+    <center>
+      <div class="col-mt-3">
+        <table class="table table-bordered">
+          <thead>
+            <tr>
+              <th scope="col" id="#exampleModalLong" class="text-center" style="color:#3b3bb1;font-size: 18px;">Course Catagories</th>
+
+            </tr>
+          </thead>
+          <tbody>
+            <tr >
+      </div>
+      <div class="modal-body">
+        <tbody>
+            <tr >
+             <!--  <th scope="row">1</th> -->
+             <td class="first">
+
+              <ul id="myUL">
+
+                <li class="ul1">
+                 <span class="caret" id="f"><i class="fas fa-briefcase">&nbsp;&nbsp;</i>Business&nbsp;&nbsp;&nbsp;></span>
+                 <div >
+                  <ul class="nested" id="fir">
+                    <li class="ul2">&nbsp;&nbsp;&nbsp;&nbsp;<input type="checkbox" class="check">&nbsp;Human Resources</li>
+                    <li class="ul2">&nbsp;&nbsp;&nbsp;&nbsp;<input type="checkbox" class="check">&nbsp;Marketing</li>
+                    <li class="ul2">&nbsp;&nbsp;&nbsp;&nbsp;<input type="checkbox" class="check">&nbsp;Finance And Accounting</li>
+                    <li class="ul2">&nbsp;&nbsp;&nbsp;&nbsp;<input type="checkbox" class="check">&nbsp;Digital Marketing</li>
+                    <li class="ul2">&nbsp;&nbsp;&nbsp;&nbsp;<input type="checkbox" class="check">&nbsp;Trading</li>
+
+                  </ul>
+
+                </div>
+              </li>
+
+            </ul>
+
+
+          </td>
+        </tr>
+        <tr>
+          <td class="second"><ul id="myUL">
+
+            <li class="ul1">
+              <span class="caret" id="s"><i class='fas fa-laptop'></i>&nbsp;&nbsp;IT & Software&nbsp;&nbsp;&nbsp;></span>
+              <div>
+                <ul class="nested">
+                  <li class="ul2">&nbsp;&nbsp;&nbsp;&nbsp;<input type="checkbox" class="check">&nbsp;Web Development</li>
+                  <li class="ul2">&nbsp;&nbsp;&nbsp;&nbsp;<input type="checkbox" class="check">&nbsp;Mobile Development</li>
+                  <li class="ul2">&nbsp;&nbsp;&nbsp;&nbsp;<input type="checkbox" class="check">&nbsp;Data Science</li>
+                  <li class="ul2">&nbsp;&nbsp;&nbsp;&nbsp;<input type="checkbox" class="check">&nbsp;Programming Languages</li>
+                  <li class="ul2">&nbsp;&nbsp;&nbsp;&nbsp;<input type="checkbox" class="check">&nbsp;Databases tools</li>
+
+                </ul>
+
+              </div>
+            </li>
+
+          </ul>
+        </td>
+      </tr>
+      <tr>
+        <td class="third"><ul id="myUL">
+
+          <li class="ul1">
+            <span class="caret" id="t"><i class="fab fa-microsoft"></i>&nbsp;&nbsp;Office tools&nbsp;&nbsp;&nbsp;></span>
+            <div>
+              <ul class="nested">
+                <li class="ul2">&nbsp;&nbsp;&nbsp;&nbsp;<input type="checkbox" class="check">&nbsp;Advances Excel</li>
+                <li class="ul2">&nbsp;&nbsp;&nbsp;&nbsp;<input type="checkbox" class="check">&nbsp;CAD/CAM</li>
+                <li class="ul2">&nbsp;&nbsp;&nbsp;&nbsp;<input type="checkbox" class="check">&nbsp;Tally</li>
+
+              </ul>
+
+            </div>
+          </li>
+
+        </ul>
+      </td>
+    </tr>
+    <tr>
+      <td class="fourth"><ul id="myUL">
+
+        <li class="ul1">
+          <span class="caret" id="fo"><i class="fas fa-magic"></i>&nbsp;&nbsp;Creative tools&nbsp;&nbsp;&nbsp;></span>
+          <div>
+            <ul class="nested">
+              <li class="ul2">&nbsp;&nbsp;&nbsp;&nbsp;<input type="checkbox" class="check">&nbsp;Photography</li>
+              <li class="ul2">&nbsp;&nbsp;&nbsp;&nbsp;<input type="checkbox" class="check">&nbsp;Vediography</li>
+              <li class="ul2">&nbsp;&nbsp;&nbsp;&nbsp;<input type="checkbox" class="check">&nbsp;Web/Visual/Game design</li>
+              <li class="ul2">&nbsp;&nbsp;&nbsp;&nbsp;<input type="checkbox" class="check">&nbsp;Musical Instruments</li>
+              <li class="ul2">&nbsp;&nbsp;&nbsp;&nbsp;<input type="checkbox" class="check">&nbsp;Vocal</li>
+              <li class="ul2">&nbsp;&nbsp;&nbsp;&nbsp;<input type="checkbox" class="check">&nbsp;Dance</li>
+              <li class="ul2">&nbsp;&nbsp;&nbsp;&nbsp;<input type="checkbox" class="check">&nbsp;Doodling</li>
+              <li class="ul2">&nbsp;&nbsp;&nbsp;&nbsp;<input type="checkbox" class="check">&nbsp;DIY/li>
+                <li class="ul2">&nbsp;&nbsp;&nbsp;&nbsp;<input type="checkbox" class="check">&nbsp;Content writing</li>
+
+              </ul>
+
+            </div>
+          </li>
+
+        </ul>
+      </td>
+    </tr>
+    <tr>
+      <td class="fifth"><ul id="myUL">
+
+        <li class="ul1">
+          <span class="caret" id="fi"><i class="fas fa-street-view"></i>&nbsp;&nbsp;Personality Development&nbsp;&nbsp;&nbsp;></span>
+          <div>
+            <ul class="nested" >
+              <li class="ul2">&nbsp;&nbsp;&nbsp;&nbsp;<input type="checkbox" class="check">&nbsp;NLP</li>
+              <li class="ul2">&nbsp;&nbsp;&nbsp;&nbsp;<input type="checkbox" class="check">&nbsp;Personal Finance</li>
+              <li class="ul2">&nbsp;&nbsp;&nbsp;&nbsp;<input type="checkbox" class="check">&nbsp;Stress Management</li>
+              <li class="ul2">&nbsp;&nbsp;&nbsp;&nbsp;<input type="checkbox" class="check">&nbsp;Cope up VUCA World</li>
+              <li class="ul2">&nbsp;&nbsp;&nbsp;&nbsp;<input type="checkbox" class="check">&nbsp;Languages</li>
+              <li class="ul2">&nbsp;&nbsp;&nbsp;&nbsp;<input type="checkbox" class="check">&nbsp;Business Communication</li>
+
+            </ul>
+
+          </div>
+        </li>
+
+      </ul>
+    </td>
+  </tr>
+  <tr>
+    <td class="sixth"><ul id="myUL">
+
+      <li class="ul1">
+        <span class="caret" id="si"><i class="fas fa-user-alt"></i>&nbsp;&nbsp;Solopreneurship&nbsp;&nbsp;&nbsp;></span>
+        <ul class="nested">
+          <li class="ul2">&nbsp;&nbsp;&nbsp;&nbsp;<input type="checkbox" class="check">&nbsp;Set-up sole-proprietorship</li>
+          <li class="ul2">&nbsp;&nbsp;&nbsp;&nbsp;<input type="checkbox" class="check">&nbsp;Personal Branding</li>
+          <li class="ul2">&nbsp;&nbsp;&nbsp;&nbsp;<input type="checkbox" class="check">&nbsp;Blog Writing</li>
+          <li class="ul2">&nbsp;&nbsp;&nbsp;&nbsp;<input type="checkbox" class="check">&nbsp;Wordpress/Website</li>
+          <li class="ul2">&nbsp;&nbsp;&nbsp;&nbsp;<input type="checkbox" class="check">&nbsp;Digital Marketing</li>
+
+        </ul>
+
+
+      </li>
+
+    </ul>
+  </td>
+</tr>
+<tr>
+  <td class="seventh"><ul id="myUL">
+
+    <li class="ul1">
+      <span class="caret" id="se"><i class="fas fa-hand-holding-usd"></i>&nbsp;&nbsp;Entrepreneurship&nbsp;&nbsp;&nbsp;></span>
+
+      <ul class="nested">
+      </ul>
+
+    </li>
+
+  </ul>
+</td>
+</tr>
+<tr>
+  <td class="eight"><ul id="myUL">
+    <li class="ul1">
+      <span class="caret" id="e"><i class="fas fa-heartbeat"></i>&nbsp;&nbsp;Health & Fitness &nbsp;&nbsp;&nbsp;></span>
+
+      <ul class="nested">
+      </ul>
+
+    </li>
+
+  </ul>
+</td>
+</tr>
+<tr>
+ <td class="nine"><ul id="myUL">
+  <li class="ul1">
+    <span class="caret" id="n"><i class="fab fa-linkedin"></i>&nbsp;&nbsp;Leverage Social Media for Career Advancement&nbsp;&nbsp;&nbsp;></span>
+
+    <ul class="nested">
+    </ul>
+
+  </li>
+
+</ul>
+</td>
+
+
+
+</tr>
+
+</tbody>
+</table>
+</div>
+</center>
+</div>
+      <div class="modal-footer">
+
+        <button type="button" class="btn btn-primary">Save changes</button>
+        <button type="button" class="btn btn-secondary" onclick="reset()" data-dismiss="modal" >Close</button>
+      </div>
+    </div>
+  </div>
+</div> 
+
+</div>
+</div>
+<script>
+    
+    $('#f').click(function(){
+
+   if(document.querySelector(".first").style.background=="ghostwhite"){
+    document.querySelector(".first").style.background="white";
+  }
+  else{
+    document.querySelector(".first").style.background="ghostwhite";
+  }
+
+
+});
+
+  $('#s').click(function(){
+
+   if(document.querySelector(".second").style.background=="ghostwhite"){
+    document.querySelector(".second").style.background="white";
+  }
+  else{
+    document.querySelector(".second").style.background="ghostwhite";
+  }
+
+
+});
+
+  $('#t').click(function(){ 
+
+   if(document.querySelector(".third").style.background=="ghostwhite"){
+    document.querySelector(".third").style.background="white";
+  }
+  else{
+    document.querySelector(".third").style.background="ghostwhite";
+  }
+
+  
+});
+
+  $('#fo').click(function(){
+
+   if(document.querySelector(".fourth").style.background=="ghostwhite"){
+    document.querySelector(".fourth").style.background="white";
+  }
+  else{
+    document.querySelector(".fourth").style.background="ghostwhite";
+  }
+
+
+});
+
+  $('#fi').click(function(){ 
+
+   if(document.querySelector(".fifth").style.background=="ghostwhite"){
+    document.querySelector(".fifth").style.background="white";
+  }
+  else{
+    document.querySelector(".fifth").style.background="ghostwhite";
+  }
+
+
+});
+
+  $('#si').click(function(){
+
+   if(document.querySelector(".sixth").style.background=="ghostwhite"){
+    document.querySelector(".sixth").style.background="white";
+  }
+  else{
+    document.querySelector(".sixth").style.background="ghostwhite";
+  }
+
+
+});
+
+  $('#se').click(function(){
+
+   if(document.querySelector(".seventh").style.background=="ghostwhite"){
+    document.querySelector(".seventh").style.background="white";
+  }
+  else{
+    document.querySelector(".seventh").style.background="ghostwhite";
+  }
+
+
+});
+
+  $('#e').click(function(){
+
+   if(document.querySelector(".eight").style.background=="ghostwhite"){
+    document.querySelector(".eight").style.background="white";
+  }
+  else{
+    document.querySelector(".eight").style.background="ghostwhite";
+  }
+
+
+});
+
+  $('#n').click(function(){
+
+   if(document.querySelector(".nine").style.background=="ghostwhite"){
+    document.querySelector(".nine").style.background="white";
+  }
+  else{
+    document.querySelector(".nine").style.background="ghostwhite";
+  }
+
+
+});
+
+  
+
+
+
+  var toggler = document.getElementsByClassName("caret");
+  var i;
+
+  for (i = 0; i < toggler.length; i++) {
+    toggler[i].addEventListener("click", function() {
+
+      this.parentElement.querySelector(".nested").classList.toggle("active");
+      document.getElementsById("fir").style.display="none";
+
+
+    });
+  }
+</script>
+</form>
+</body>
+</html>
