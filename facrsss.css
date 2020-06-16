@@ -34,6 +34,10 @@ p{
   font-family: 'Raleway',sans-serif;
   text-align: left;
 }
+.faq{
+position: absolute;
+bottom: 0px; 
+}
  img
 {
   display:flex; 
