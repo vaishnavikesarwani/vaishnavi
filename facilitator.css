@@ -34,6 +34,10 @@ p{
   font-family: 'Raleway',sans-serif;
   text-align: left;
 }
+.head{
+  padding-bottom:20px;
+  margin-bottom:50px;
+}
 #faq{
 margin:20px;
 padding:20px;
